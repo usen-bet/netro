@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import { useState } from "react"
 import { Topvert } from "./Animation/Topvert"
 import Logo from "../assets/logo.png"
+import{ RevealRed } from "../components/Animation/RevealRed"
 
 function Navbar() {
   const [unclick, setUnclick] = useState(true)
@@ -34,29 +35,37 @@ function Navbar() {
        <div className="linkers"> 
        <ul className="Link-list">
         <li>
+        <RevealRed>
           <Link to="/" className="link"> 
           Home
          </Link>
+         </RevealRed>
         </li>
         <li>
           <Link to="/Qual" className="link">
-          Qualifications
+          <RevealRed>Qualifications</RevealRed>
           </Link>
         </li>
         <li>
+        <RevealRed>
         <Link to="/Services" className="link">
           Services
         </Link>
+        </RevealRed>
         </li>
         <li>
+        <RevealRed>
         <Link to="/Reviews" className="link">
           Reviews
         </Link>
+        </RevealRed>
         </li>
         <li>
+        <RevealRed>
         <Link to="/Contact" className="link">    
           Contact Me
         </Link>
+        </RevealRed>
         </li>
        </ul>
        </div>

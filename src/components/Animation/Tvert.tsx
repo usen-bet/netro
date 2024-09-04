@@ -7,7 +7,7 @@ interface Props {
     height?: "fit-content"
 }
 
-export const Topvert = ({children, width = "100%"}: Props) => {
+export const Topvert = ({children, width = "fit-content"}: Props) => {
     const ref = useRef(null)
     const isInView = useInView(ref, {once: true})
     const mainControls = useAnimation();

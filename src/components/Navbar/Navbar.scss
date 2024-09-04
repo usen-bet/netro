@@ -133,9 +133,8 @@ $breakpoints: (
 
   .links-bg {
     z-index: 99999;
-    width:100vw;
-    overflow: hidden;
-    height: calc(100vh - 58px);
+    width: 100vw;
+    height: calc(100% - 58px);
     position: absolute;
     background-color: var(--sec-color);
     top: 58px;
@@ -145,13 +144,11 @@ $breakpoints: (
     animation: page;
     animation-duration: 0.3s;
     animation-fill-mode: forwards;
-    overflow: hidden;
+    right: 0px;
   }
 
 ul {
     display: grid;
-    position: relative;
-    bottom: 50px;
     row-gap: 20px;
     li {
       list-style: none;
@@ -160,8 +157,13 @@ ul {
           cursor: pointer;
   
       }
-    }
+    } 
 }
+
+.linkers {
+  position: relative;
+  bottom: 50px;
+} 
 
   //Animations
 
@@ -174,8 +176,8 @@ ul {
   }
 
   @keyframes page{
-    from {transform: rotate(0deg);}
-    to {transform: rotate(-360deg);}
+    from {transform: scale(0);}
+    to {transform: scale(1);}
   }
 
   @keyframes examples{

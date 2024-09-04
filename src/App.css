@@ -24,6 +24,7 @@
   box-sizing: border-box;
   color: white;
   font-family: Jetbrains;
+  overflow: hidden;
 }
 
 a {

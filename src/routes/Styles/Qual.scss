@@ -1,3 +1,27 @@
+$breakpoints: (
+    "smob": "(max-width: 420px)",
+    "mob": "(min-width:421px) and (max-width:652px)",
+    "hero": "(min-width:540px) and (max-width:652px)",
+    "sstab": "(min-width:559px) and (max-width:652px)",
+    "stab": "(min-width:653px) and (max-width:744px)",
+    "tab": "(min-width:744px) and (max-width:1000px)",
+    "tabs": "(min-width:1000px)",
+    "maxtab": "(max-width:1000px)",
+    "sdesk": "(min-width:1001px) and (max-width:1500px)",
+    "desk": "(min-width:1501px) and (max-width:2000px)",
+);
+
+@mixin breakpoint($user-value) {
+  $my-map: map-get($breakpoints, $user-value);
+  @if $my-map {
+      @media (#{$my-map}) {
+          @content;
+      }
+  }@else {
+      @error "breakpoint #{$user-value} Not Working"
+  }
+};
+
 .Qualpage {
     width: 100vw;
     height: 100vh;
@@ -8,17 +32,31 @@
 
 .ambassador-page {
     background-color: var(--pri-color);
-    width: 60vw;
-    height: 70vh;
+    width: 65vw;
+    height: 70vh; 
     margin: auto;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    @include breakpoint(smob) {
+        width: 90vw;
+    }
+    @include breakpoint(mob) {
+        width: 90vw;
+    }
+
     h1 {
       font-family: jetbrains;
       margin-bottom: 10px;
+      @include breakpoint(smob) {
+        font-size: 30px;
+        text-align: center;
+      }
+      @include breakpoint(mob) {
+        font-size: 30px;
+      }
     }
 
     .jobs {
@@ -75,6 +113,20 @@
     margin-top: 10px;
     margin-left: 10px;
     padding-right: 10px;
+    h1 {
+        @include breakpoint(smob) {
+            display: none;
+        }
+        @include breakpoint(mob) {
+            display: none;
+        }
+    }
+    @include breakpoint(smob) {
+        padding: 0px;
+    }
+    @include breakpoint(mob) {
+        padding: 0px;
+    }
 }
 
 .kol-logo {
