@@ -7,7 +7,6 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Contact from "./routes/Contact.jsx"
-import Intro from "./routes/Intro.jsx"
 import Qual from "./routes/Qual.jsx"
 import Services from "./routes/Services.jsx"
 import Reviews from "./routes/Reviews.jsx"
