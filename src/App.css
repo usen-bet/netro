@@ -1,0 +1,42 @@
+:root {
+  --pri-color:#EC8039;
+  --sec-color: #51237E;
+}
+
+@font-face {
+  font-family: Jetbrains;
+  src: url(./fonts/JetBrainsMono-ExtraLight.ttf);
+}
+
+@font-face {
+  font-family: Tafel;
+  src: url(./fonts/TafelSansPro-ThinIt.ttf);
+}
+
+@font-face {
+  font-family: Tafelreg;
+  src: url(./fonts/TafelSansPro-RegularIt.ttf);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: Jetbrains;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-family: Tafel;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}

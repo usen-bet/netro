@@ -1,0 +1,220 @@
+$breakpoints: (
+    "smob": "(max-width: 420px)",
+    "mob": "(min-width:421px) and (max-width:652px)",
+    "hero": "(min-width:540px) and (max-width:652px)",
+    "sstab": "(min-width:559px) and (max-width:652px)",
+    "stab": "(min-width:653px) and (max-width:744px)",
+    "tab": "(min-width:744px) and (max-width:1000px)",
+    "tabs": "(min-width:1000px)",
+    "tabss": "(max-width:1000px)",
+    "sdesk": "(min-width:1001px) and (max-width:1500px)",
+    "desk": "(min-width:1501px) and (max-width:2000px)",
+);
+
+@mixin breakpoint($user-value) {
+    $my-map: map-get($breakpoints, $user-value);
+    @if $my-map {
+        @media (#{$my-map}) {
+            @content;
+        }
+    }@else {
+        @error "breakpoint #{$user-value} Not Working"
+    }
+};
+
+.bar {
+    height: 58px;
+    width: 100vw;
+    border-bottom: 1px solid white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    margin-left: 10px;
+}
+
+
+//Hamburger Menu
+
+.hamburger {
+    @include breakpoint(tabs) {
+        display: none;
+    }
+    width: 50px;
+    height: 20px;
+    gap: 10px;
+    display: grid;
+    cursor: pointer;
+    margin-right: 20px;
+    overflow: visible !important;
+}
+
+.hamburger-line {
+    width: 100%;
+    height: 2px;
+    background-color: white;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-right: 10px;
+    @include breakpoint(tabss) {
+        display: none;
+    }
+    p {
+        cursor: pointer;
+    }
+}
+
+.link {
+  color: white;
+  position: relative;
+  text-decoration: none;
+  transition: all 0.15s ease-out;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0px;
+    left: 0;
+    background: #fff;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+  }
+  &:hover {
+    transition: all 0.15s ease-out;
+    &:before {
+        visibility: visible;
+        transform: scaleX(1);
+    }
+  }
+  }
+
+  .active {
+    z-index: 9999;
+    height: 50px;
+    width: 50px;
+    // margin-top: 20px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+      div {
+        @include breakpoint(tab) {
+          width:40px;
+          height: 2px;
+          background-color: white;  
+      }
+      
+    }
+  }
+
+  .one{
+    animation-name: example;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+  }
+  .three {
+    animation: examples;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+  }
+
+  .two {
+     display: none;
+  }
+
+  .links-bg {
+    z-index: 99999;
+    width:100vw;
+    overflow: hidden;
+    height: calc(100vh - 58px);
+    position: absolute;
+    background-color: var(--sec-color);
+    top: 58px;
+    display: flex;
+    place-items: center;  
+    justify-content: center; 
+    animation: page;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    overflow: hidden;
+  }
+
+ul {
+    display: grid;
+    position: relative;
+    bottom: 50px;
+    row-gap: 20px;
+    li {
+      list-style: none;
+      a {
+          font-size: 36px;
+          cursor: pointer;
+  
+      }
+    }
+}
+
+  //Animations
+
+  @keyframes example {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(45deg);
+        position: relative;
+        top:2px;
+    }
+  }
+
+  @keyframes page{
+    from {transform: rotate(0deg);}
+    to {transform: rotate(-360deg);}
+  }
+
+  @keyframes examples{
+    from {transform: rotate(0deg);}
+    to {transform: rotate(-45deg);}
+  }  
+
+  @keyframes reverseexample {
+    from {transform: rotate(45deg);}
+    to {transform: rotate(0deg); 
+        position: relative;
+        top:0px;
+    }
+  }
+
+  @keyframes reverseexamples{
+    from {transform: rotate(-45deg);}
+    to {transform: rotate(0deg);}
+  }
+
+  @keyframes appear{
+    from {display: none;}
+    to {display: block;}
+  }  
+  
+  .ham-top {
+    animation-name: reverseexample;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+  }
+
+  .ham-mid {
+    animation-name: appear;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+ }
+
+ .ham-bottom {
+  animation: reverseexamples;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+ }

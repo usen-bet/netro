@@ -1,0 +1,89 @@
+.Qualpage {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--sec-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.ambassador-page {
+    background-color: var(--pri-color);
+    width: 60vw;
+    height: 70vh;
+    margin: auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h1 {
+      font-family: jetbrains;
+      margin-bottom: 10px;
+    }
+
+    .jobs {
+    position: relative;
+    top: 5px;
+    left: 10px;
+       h1 {
+        color: black;
+        font-size: 16px;
+        font-family: Tafel;
+    }
+    }
+}
+
+.ambassador-group {
+    margin-top: 15px;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.ambassador-box {
+    width: 100%;
+    height: fit-content;
+}
+
+.ambassador-details {
+    width: 45%;
+    height: 130px;
+    background-color: white;
+    border-radius: 10px;  
+    
+    h1 {
+        color: black;
+        font-family: Tafel;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        margin: 0px;
+    }  
+}
+
+.middle {
+    margin: auto;
+}
+
+.kol {
+    width: fit-content;
+    height: 40px;
+    border: black 1px solid;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding-right: 10px;
+}
+
+.kol-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    img {
+        border-radius: 3px;
+    }
+}

@@ -1,0 +1,252 @@
+$breakpoints: (
+    "smob": "(max-width: 420px)",
+    "mob": "(min-width:421px) and (max-width:652px)",
+    "hero": "(min-width:540px) and (max-width:652px)",
+    "sstab": "(min-width:559px) and (max-width:652px)",
+    "stab": "(min-width:653px) and (max-width:744px)",
+    "tab": "(min-width:744px) and (max-width:1000px)",
+    "sdesk": "(min-width:1001px) and (max-width:1500px)",
+    "desk": "(min-width:1501px) and (max-width:2000px)",
+);
+
+@mixin breakpoint($user-value) {
+    $my-map: map-get($breakpoints, $user-value);
+    @if $my-map {
+        @media (#{$my-map}) {
+            @content;
+        }
+    }@else {
+        @error "breakpoint #{$user-value} Not Working"
+    }
+};
+
+.project-head{
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--pri-color);
+    background-image: url(./assets/Mobile/bg-dashboard.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include breakpoint(stab) {
+        background-image: url(./assets/Tablet/bg-dashboard.png);
+    }
+    @include breakpoint(tab) {
+        background-image: url(./assets/Desktop/bg-hero-mid-desk.png);
+    }
+    @include breakpoint(sdesk) {
+        background-image: url(./assets/Desktop/bg-hero-mid-desk.png);
+    }
+    @include breakpoint(desk) {
+        background-image: url(./assets/Desktop/bgherobigdesk.png);
+    }
+}
+
+//Write-up
+.top-heading{
+    z-index: 10000;
+    text-align: center;
+    margin-top: 43px;
+    position: relative;
+    p {
+       font-size: 12px; 
+       @include breakpoint(mob) {
+        font-size: 14px;
+       }@include breakpoint(sstab) {
+        font-size: 18px;
+       }
+       @include breakpoint(stab) {
+        font-size: 18px;
+       }
+       @include breakpoint(tab) {
+        font-size: 24px;
+       }
+       @include breakpoint(sdesk) {
+        font-size: 24px;
+       }
+       @include breakpoint(desk) {
+        font-size: 24px;
+       }
+    }
+    h2 {
+      font-size: 32px; 
+      position: relative;
+      top: 20px;
+      @include breakpoint(mob) {
+        font-size: 36px;
+       }
+       @include breakpoint(stab) {
+        font-size: 36px;
+       }
+    }
+    h1 {
+        font-size: 64px;
+        @include breakpoint(stab) {
+            font-size: 75px;
+        }
+        @include breakpoint(tab) {
+            font-size: 96px;
+        }
+        @include breakpoint(sdesk) {
+            font-size: 96px;
+        }
+        @include breakpoint(desk) {
+            font-size: 96px;
+        }
+    }
+}
+
+.box {
+    width:10px ;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.what-i-do {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include breakpoint(smob) {
+        justify-content: space-around;
+    }
+    @include breakpoint(tab) {
+      gap: 30px;  
+    }
+    @include breakpoint(sdesk) {
+        gap: 30px;  
+    }
+    @include breakpoint(desk) {
+        gap: 30px;  
+    }
+}
+
+.spec {
+    display: flex;
+    align-items: center;
+    @include breakpoint(mob) {
+        margin: 0px 5px;
+    }
+    @include breakpoint(stab) {
+        margin: 10px;
+    }
+    @include breakpoint(tab) {
+        
+    }
+}
+
+.shine {
+    display: none;
+    margin: auto;
+    height: 490px;
+    width: 490px;
+    background-color: #FFC555;
+    filter: blur(150px);
+    border-radius: 50%;
+    @include breakpoint(desk) {
+        display: block;
+    }
+    @include breakpoint(sdesk) {
+        display: block;
+    }
+}
+
+//Image//
+.hero {
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+    background-size: cover;
+    @include breakpoint(smob) {
+        width: 100vw;
+        height: 500px;
+        position: absolute;
+        bottom: 0px;
+        background-image: url(./assets/Mobile/Hero.png);
+    }
+    @include breakpoint(mob) {
+        width: 100vw;
+        height: 500px;
+        position: absolute;
+        bottom: 0px;
+        background-image: url(./assets/Tablet/Hero-home.png);
+        background-size: cover;
+    }
+    @include breakpoint(stab) {
+        width: 100vw;
+        height: 500px;
+        position: absolute;
+        bottom: 0px;
+        background-image: url(./assets/Tablet/Hero-home.png);
+        background-size: contain;
+    }
+    @include breakpoint(hero) {
+        width: 100vw;
+        height: 600px;
+        position: absolute;
+        bottom: 0px;
+        background-image: url(./assets/Tablet/Hero-home.png);
+        background-size: contain;
+    }
+    @include breakpoint(tab) {
+        width: 100vw;
+        height: 560px;
+        position: absolute;
+        bottom: 0px;
+        background-image: url(./assets/Tablet/Hero-home.png);
+        background-size: contain;
+    }
+    @include breakpoint(sdesk) {
+        width: 100vw;
+        height: 560px;
+        position: absolute;
+        bottom: 0px;
+        background-image: url(./assets/Tablet/Hero-home.png);
+        background-size: contain;
+    }
+    @include breakpoint(desk) {
+        width: 100vw;
+        height: 530px;
+        position: absolute;
+        bottom: 0px;
+        background-image: url(./assets/Desktop/Hero.png);
+        background-size: contain;
+    }
+}
+
+.link1 {
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+    perspective: 600px;
+    perspective-origin: 50% 50%;
+    
+    &:hover span {
+        background: var(--pri-color);
+      transform: translate3d( 0px, 0px, -30px ) rotateX( 90deg );
+    }
+    
+    span {
+      display: block;
+      position: relative;
+      padding: 4px;
+      transition: all 400ms ease;
+      transform-origin: 50% 0%;
+      transform-style: preserve-3d;
+      
+      &:after {
+        content: attr(data-title);
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: 4px;
+        color: #fff;
+        background: var(--pri-color);
+        transform-origin: 50% 0%;
+        transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
+      }
+    }
+}
