@@ -3,11 +3,17 @@ import "./App.scss"
 import Navbar from "./components/Navbar"
 import {Slowvert} from "./components/Animation/Slowvert"
 import {Fastvert} from "./components/Animation/Fastvert"
-import {Pop} from "./components/Animation/Pop"
+import {Helmet} from "react-helmet";
+
 function App() {
 
   return (
     <div className="project-head">
+      <Helmet>
+                <meta charSet="utf-8" />
+                <title>Netrofolio</title>
+                <link data-react-helmet="true" rel="icon" type='image/png' href="/favicon.ico" />
+      </Helmet>
       <div className="nav-bar">
       <Navbar />
       <div className="top-heading">
