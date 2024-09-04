@@ -2,7 +2,7 @@ import "./Styles/Services.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import Navbar from "../components/Navbar/Navbar";
+import Navbar from "../components/Navbar";
 import Slider from "react-slick";
 import { Topvert } from "../components/Animation/Topvert"
 

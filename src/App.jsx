@@ -1,6 +1,6 @@
 import "./App.css"
 import "./App.scss"
-import Navbar from "./components/Navbar/Navbar"
+import Navbar from "./components/Navbar"
 import {Slowvert} from "./components/Animation/Slowvert"
 import {Fastvert} from "./components/Animation/Fastvert"
 import {Pop} from "./components/Animation/Pop"

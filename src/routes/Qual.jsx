@@ -5,7 +5,7 @@ import Axelar from "./Images/Logos/Axelar.png"
 import Tangible from "./Images/Logos/Tangible.png"
 import cadence from "./Images/Logos/cadence.png"
 import Cenoa from "./Images/Logos/Cenoa.png"
-import Navbar from "../components/Navbar/Navbar"
+import Navbar from "../components/Navbar"
 import { RevealRed } from "../components/Animation/RevealRed"
 import { Slowvert } from "../components/Animation/Slowvert"
 

@@ -1,5 +1,5 @@
 import "./Styles/Contact.scss"
-import Navbar from "../components/Navbar/Navbar"
+import Navbar from "../components/Navbar"
 import contactimg from "./Images/Tablet/contact-img.png"
 
 function Contact() {

@@ -1,8 +1,8 @@
-import Logo from "../Images/Logo.png"
-import "./Navbar.scss"
+import "./Navbar/Navbar.scss"
 import { Link } from "react-router-dom"
 import { useState } from "react"
-import { Topvert } from "../Animation/Topvert"
+import { Topvert } from "./Animation/Topvert"
+import Logo from "../assets/logo.png"
 
 function Navbar() {
   const [unclick, setUnclick] = useState(true)
