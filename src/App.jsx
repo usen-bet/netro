@@ -62,9 +62,21 @@ function App() {
       
       </div> 
       <div className="Accolades">
-        <div className="purplebox ones"></div>
-        <div className="purplebox twos"></div>
-        <div className="purplebox threes"></div>
+        <div className="purplebox ones">
+          <ul>
+            <li>Number 1 bounty winner on Superteam Nigeria</li>
+          </ul>
+        </div>
+        <div className="purplebox twos">
+          <ul>
+            <li>DeFi Tiger’s Threador of the year</li>
+          </ul>
+        </div>
+        <div className="purplebox threes">
+          <ul>
+            <li>Over 12000+ followers on X</li>
+          </ul>
+        </div>
       </div>
       </div>
     </div>

@@ -275,15 +275,27 @@ $breakpoints: (
 .purplebox {
     height: 65px;
     background-color: var(--sec-color);
-    color: white;
+    color: white;    
+    position: absolute;
+    right: 10px;
+    border: white 1px solid;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    li {
+        
+    }
 }
 
 .ones {
     width: 474px;
+    bottom: 46px;
 }
 .twos {
     width: 377px;
+    bottom: 131px;
 }
 .threes {
     width: 309px;
+    bottom: 216px;
 }
