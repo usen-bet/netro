@@ -9,7 +9,6 @@ import {
 import Contact from "./routes/Contact.jsx"
 import Qual from "./routes/Qual.jsx"
 import Services from "./routes/Services.jsx"
-import Reviews from "./routes/Reviews.jsx"
 
 const router = createBrowserRouter([
   {
@@ -27,11 +26,7 @@ const router = createBrowserRouter([
   {
     path: "/Services",
     element: <Services/>,
-  },
-  {
-    path: "/Reviews",
-    element: <Reviews/>,
-  },
+  }
 ]);
 
 createRoot(document.getElementById('root')).render(

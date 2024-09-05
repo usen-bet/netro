@@ -60,6 +60,11 @@ function App() {
       </div>
         <div className="hero">
       
+      </div> 
+      <div className="Accolades">
+        <div className="purplebox ones"></div>
+        <div className="purplebox twos"></div>
+        <div className="purplebox threes"></div>
       </div>
       </div>
     </div>

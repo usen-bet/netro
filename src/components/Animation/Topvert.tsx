@@ -7,7 +7,7 @@ interface Props {
     height?: "fit-content"
 }
 
-export const Topvert = ({children, width = "100%"}: Props) => {
+export const Topvert = ({children, width = "fit-content"}: Props) => {
     const ref = useRef(null)
     const isInView = useInView(ref, {once: true})
     const mainControls = useAnimation();
@@ -23,7 +23,7 @@ export const Topvert = ({children, width = "100%"}: Props) => {
       }
     }, [isInView])
     return (
-        <div style={{ position: "relative",width, overflow: "hidden"}}>
+        <div className='center' style={{ position: "relative",width, overflow: "hidden"}}>
         <motion.div 
         variants={{
             hidden: { opacity: 0, y: -100},
