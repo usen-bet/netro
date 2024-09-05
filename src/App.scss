@@ -262,13 +262,20 @@ $breakpoints: (
 
 .Accolades {
     width: 474px;
-    height: 65px;
+    height: 234px;
+    bottom: 46px;
+    display: flex;
+    flex-direction: column;
+    right: 0px;
+    position: absolute;
+    gap: 20px;  
+    align-items: end; 
 }
 
 .purplebox {
     height: 65px;
-    color: var(--sec-color);
-
+    background-color: var(--sec-color);
+    color: white;
 }
 
 .ones {
