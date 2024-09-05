@@ -127,3 +127,39 @@ $breakpoints: (
     display: none;
   }
 }
+
+.g-connect {
+  position: absolute;
+  right: 0px;
+  bottom: 100px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.connect {
+  width: 60px;
+  height: 50px;
+  background-color: var(--pri-color);
+  border: 1px solid black;
+  border-top-left-radius:10px ;
+  border-bottom-left-radius:10px ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+  &:hover {
+    transform: translateX(-5px);
+    cursor: pointer;
+  }
+}
+
+.black {
+  transition: all 0.2s ease;
+  &:hover {
+    transform: scale(1.3);
+  }
+}

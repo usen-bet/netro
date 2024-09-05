@@ -7,10 +7,15 @@ import{ RevealRed } from "../components/Animation/RevealRed"
 
 function Navbar() {
   const [unclick, setUnclick] = useState(true)
+  const [off, setOff] = useState(true)
   const toggle = () => {
     console.log("trap")
     setUnclick(!unclick)
   }
+  const switched = () => {
+    setOff(!off)
+  }
+
   return (
     <div className='bar'>
      <div className='logo'>
@@ -22,11 +27,11 @@ function Navbar() {
        <div className={unclick ? 'hamburger-line ham-bottom' : "three hamburger-line"}></div>
     </div>
     <div className='navigation'>
-      <Link to="/"><p className='link'><Topvert>Home</Topvert></p></Link>
-      <Link to="/Qual"><p className='link'><Topvert>Qualification</Topvert></p></Link>
-      <Link to="/Services"><p className='link'><Topvert>Services</Topvert></p></Link>
-      <Link to="/Reviews"><p className='link'><Topvert>Reviews</Topvert></p></Link>
-      <Link to="/Contact"><p className='link'><Topvert>Contact Me</Topvert></p></Link>
+      <Link to="/"><p className={off ? 'link' : 'link link0'} onClick={switched}><Topvert>Home</Topvert></p></Link>
+      <Link to="/Qual"><p className={off ? 'link' : 'link link2'}><Topvert>Qualification</Topvert></p></Link>
+      <Link to="/Services"><p className={off ? 'link' : 'link link3'}><Topvert>Services</Topvert></p></Link>
+      <Link to="/Reviews"><p className={off ? 'link' : 'link link4'}><Topvert>Reviews</Topvert></p></Link>
+      <Link to="/Contact"><p className={off ? 'link' : 'link link5'}><Topvert>Contact Me</Topvert></p></Link>
       <div className='box'></div>
     </div>  
     {

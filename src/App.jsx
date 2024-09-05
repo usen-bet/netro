@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar"
 import {Slowvert} from "./components/Animation/Slowvert"
 import {Fastvert} from "./components/Animation/Fastvert"
 import {Helmet} from "react-helmet";
+import { RevealRed } from "./components/Animation/RevealRed"
 
 function App() {
 
@@ -63,19 +64,25 @@ function App() {
       </div> 
       <div className="Accolades">
         <div className="purplebox ones">
+          <RevealRed>
           <ul>
             <li>Number 1 bounty winner on Superteam Nigeria</li>
           </ul>
+          </RevealRed>
         </div>
         <div className="purplebox twos">
+          <RevealRed>
           <ul>
             <li>DeFi Tiger’s Threador of the year</li>
           </ul>
+          </RevealRed>
         </div>
         <div className="purplebox threes">
+          <RevealRed>
           <ul>
             <li>Over 12000+ followers on X</li>
           </ul>
+          </RevealRed>
         </div>
       </div>
       </div>
