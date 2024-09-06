@@ -4,8 +4,7 @@ import contactimg from "./Images/Tablet/contact-img.png"
 import { RevealRed } from "../components/Animation/RevealRed"
 import { Pop } from "../components/Animation/Pop"
 import { RiTwitterXLine } from "react-icons/ri";
-import { FaPhone } from "react-icons/fa6";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp, FaTelegram } from "react-icons/fa";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useRef} from 'react';
@@ -55,7 +54,7 @@ const sendEmail = (e) => {
        </div>
        <div className="g-connect">
        <div className="connect"><a href="https://x.com/netrovertHQ"><RiTwitterXLine className="black"/></a></div>
-       <div className="connect"><a href=""><FaPhone className="black"/></a></div>
+       <div className="connect"><a href="http://t.me/netrovert1"><FaTelegram className="black"/></a></div>
        <div className="connect"><a href="http://wa.me/+2348084396896"><FaWhatsapp className="black"/></a></div>
        </div>
     </div>

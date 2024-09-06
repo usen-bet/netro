@@ -55,13 +55,16 @@ function Navbar() {
         </li>
         <li>
         <RevealRed>
+        <Link to="/Contact" className="link">    
+          Contact Me
+        </Link>
         </RevealRed>
         </li>
         <li>
         <RevealRed>
-        <Link to="/Contact" className="link">    
-          Contact Me
-        </Link>
+        <a href="https://linktr.ee/netrovert" className="link">    
+          Linktree
+        </a>
         </RevealRed>
         </li>
        </ul>
