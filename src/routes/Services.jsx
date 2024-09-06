@@ -8,11 +8,12 @@ import { Topvert } from "../components/Animation/Topvert";
 
 function Services() {
   var settings = {
-    dots: false,
+    dots: true,
     infinite: true,
     speed: 150,
     slidesToShow: 3,
     slidesToScroll: 3,
+    
     responsive: [
       {
         breakpoint: 1124,

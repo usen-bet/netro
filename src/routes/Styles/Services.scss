@@ -57,8 +57,26 @@ $breakpoints: (
     justify-content: center;
 }
 
+.slick-next {
+    position: absolute !important;
+    right: 20px !important;
+}
+
+.slick-arrow {
+    background-color: var(--pri-color) !important;
+    border-radius: 50%;
+    @include breakpoint(smob) {
+        display: none !important;
+    }
+}
+
+.slick-prev {
+    position: absolute !important;
+    left: 20px !important;
+}
+
 .card {
-    width: 100vw !important; 
+    width: 338px !important; 
     background-color: transparent;
     margin: auto;
     display: flex;
