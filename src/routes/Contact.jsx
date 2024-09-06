@@ -45,9 +45,10 @@ const sendEmail = (e) => {
          <input type="text" name="to_name" placeholder="Name" />
          <input type="text" name="from_name" placeholder="Email"/> 
          <textarea cols="30" rows="10" className="message" name="message" placeholder="Message"></textarea>
-         <button type="submit" value="Send" onClick={onSubmit} >Send</button>
+         <button type="submit" value="Send" onClick={onSubmit} className="btn-form">Send</button>
          <ToastContainer
           theme="dark"
+          position="top-center"
          />
          </form>
          <img src={contactimg} alt="" className="img-contact"/>

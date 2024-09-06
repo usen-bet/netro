@@ -105,15 +105,25 @@ $breakpoints: (
   }
 
   button {
-    width: 100px;
-    height: 36px;
-    background-color: var(--sec-color);
-    border: none;
-    outline: none;
+    background-color: var(--pri-color);
+    width: 30px;
+    height: 30px;
+    margin: auto;
     border-radius: 10px;
-    cursor: pointer;
-
+    display: flex ;
+    align-items: center;
+    justify-content: center;
   }
+}
+
+.btn-form {
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100px !important;
+  height: 36px !important;
+  background-color: var(--sec-color) !important;
 }
 
 .img-contact {
