@@ -55,6 +55,20 @@ $breakpoints: (
   display: none !important;
 }
 
+.c-link {
+   padding: 7px 17px;
+   background-color: var(--pri-color);
+   border-radius: 30px;
+   transition: all 0.3s ease;
+   border: black solid 1px;
+   &:hover {
+    animation: hover;
+    animation-duration: 5.0s;
+    animation-iteration-count:infinite;
+    animation-timing-function: ease;
+    filter: drop-shadow(2px 2px 0px rgb(0,0,0,.25));
+   }
+}
 
 //Hamburger Menu
 
@@ -240,3 +254,11 @@ ul {
   animation-duration: 0.3s;
   animation-fill-mode: forwards;
  }
+
+ @keyframes hover{
+  0% {background-color: #EC8039;}
+  25% {background: linear-gradient(50deg, #51237E, #EC8039);}
+  50% {background: linear-gradient(60deg, #51237E, #EC8039);}
+  75% {background: linear-gradient(140deg, #51237E, #EC8039);}
+  100% {background: linear-gradient(180deg, #51237E, #EC8039);}
+}

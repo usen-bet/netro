@@ -6,25 +6,57 @@ import { Pop } from "../components/Animation/Pop"
 import { RiTwitterXLine } from "react-icons/ri";
 import { FaPhone } from "react-icons/fa6";
 import { FaWhatsapp } from "react-icons/fa";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useRef} from 'react';
+import emailjs from '@emailjs/browser';
 
 function Contact() {
+
+const notify = () => toast("Email sent");
+const form = useRef();
+
+const onSubmit = () => {
+  notify()
+}
+
+const sendEmail = (e) => {
+  e.preventDefault();
+
+  emailjs
+    .sendForm('service_iwjpeuq', 'template_pqj7kfq', form.current, {
+      publicKey: 'DaWi93EtV2vy-8WLW',
+    })
+    .then(
+      () => {
+        console.log('SUCCESS!');
+      },
+      (error) => {
+        console.log('FAILED...', error.text);
+      },
+    );
+};
+
   return (
     <div className="Contact-page">
       <Navbar />
       <h1><Pop>Contact Me</Pop></h1>
        <div className="form-box">
-         <div className="form">
-         <input type="text" placeholder="Name"/>
-         <input type="text" placeholder="Email"/> 
+         <form action="" ref={form} className="form" onSubmit={sendEmail}>
+         <input type="text" name="to_name" placeholder="Name" />
+         <input type="text" name="from_name" placeholder="Email"/> 
          <textarea cols="30" rows="10" className="message" name="message" placeholder="Message"></textarea>
-         <button>Send</button>
-         </div>
+         <button type="submit" value="Send" onClick={onSubmit} >Send</button>
+         <ToastContainer
+          theme="dark"
+         />
+         </form>
          <img src={contactimg} alt="" className="img-contact"/>
        </div>
        <div className="g-connect">
-       <div className="connect"><RiTwitterXLine className="black"/></div>
-       <div className="connect"><FaPhone className="black"/></div>
-       <div className="connect"><FaWhatsapp className="black"/></div>
+       <div className="connect"><a href="https://x.com/netrovertHQ"><RiTwitterXLine className="black"/></a></div>
+       <div className="connect"><a href=""><FaPhone className="black"/></a></div>
+       <div className="connect"><a href="http://wa.me/+2348084396896"><FaWhatsapp className="black"/></a></div>
        </div>
     </div>
   )
