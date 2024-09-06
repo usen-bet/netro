@@ -29,6 +29,7 @@ $breakpoints: (
     background-image: url(./assets/Mobile/bg-dashboard.png);
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
     @include breakpoint(stab) {
         background-image: url(./assets/Tablet/bg-dashboard.png);
     }

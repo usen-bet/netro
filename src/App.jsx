@@ -17,6 +17,7 @@ function App() {
       </Helmet>
       <div className="nav-bar">
       <Navbar />
+      </div>
       <div className="top-heading">
         <h2>
         <Slowvert>          
@@ -86,7 +87,6 @@ function App() {
         </div>
       </div>
       </div>
-    </div>
   )
 }
 
