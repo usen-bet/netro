@@ -15,11 +15,6 @@ function Qual() {
     <div className='Qualpage'>
      <Navbar />
       <div className='ambassador-page'>
-        <h1>
-          <Slowvert>
-          AMBASSADORIAL ROLES
-          </Slowvert>
-        </h1>
         <div className='ambassador-box'>
         <div className='middle'>
         <div className='ambassador-group'>
