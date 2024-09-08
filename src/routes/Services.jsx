@@ -45,7 +45,7 @@ function Services() {
             Compose compelling content (Videos, articles, threads) that will garner public attention leading to more awareness in the Nigerian crypto space 
             </p>
             <button className="btn-animate">
-              Book now
+              <a href="https://x.com/netrovertHQ">Book now</a>
             </button>
           </div>
           </Topvert>
@@ -65,7 +65,7 @@ function Services() {
             With Over 3 years experience in team participation and community management on NetrovertDAO and superteamNG, I can create an active and organic community
             </p>
             <button className="btn-animate">
-              Book now
+            <a href="https://x.com/netrovertHQ">Book now</a>
             </button>
           </div>
           </Topvert>
@@ -85,7 +85,7 @@ function Services() {
             spread word of your project/product and create connections between you and my audience leading to increased awareness and community growth  
             </p>
             <button className="btn-animate">
-              Book now
+              <a href="https://x.com/netrovertHQ">Book now</a>
             </button>
           </div>
           </Topvert>

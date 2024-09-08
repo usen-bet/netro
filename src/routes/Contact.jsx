@@ -1,7 +1,6 @@
 import "./Styles/Contact.scss"
 import Navbar from "../components/Navbar"
 import contactimg from "./Images/Tablet/contact-img.png"
-import { RevealRed } from "../components/Animation/RevealRed"
 import { Pop } from "../components/Animation/Pop"
 import { RiTwitterXLine } from "react-icons/ri";
 import { FaWhatsapp, FaTelegram } from "react-icons/fa";

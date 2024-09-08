@@ -76,6 +76,9 @@ $breakpoints: (
     display: flex;
     width: 100%;
     justify-content: space-around;
+    &:first-child {
+      margin-top: 0px;
+    }
 }
 
 .ambassador-box {
@@ -137,5 +140,34 @@ $breakpoints: (
     margin-right: 5px;
     img {
         border-radius: 3px;
+    }
+}
+
+//review
+
+.reviews {
+    width: 401px !important;
+    height: 107px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--pri-color);
+    border-radius: 50px;
+}
+
+.review-box{
+    width: 383px !important;
+    height: 84px;
+    background-color: white;
+    border-radius: 50px;
+    margin: auto;
+    display: flex !important;
+    align-items: center;
+
+    p {
+        color: black;
+        font-size: 12px;
+        text-align: left;
+        flex-wrap: wrap;
     }
 }
